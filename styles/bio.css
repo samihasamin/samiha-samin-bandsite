@@ -53,14 +53,14 @@ body {
   background-image: url(../assets/images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
+  background-color: rgba(50, 50, 50, 0.5);
+  background-blend-mode: overlay;
   width: 100%;
   height: 200px;
   position: relative;
-  opacity: 50%;
 }
 .herosection__title {
   color: white;
-  opacity: 100%;
   position: absolute;
   top: 90px;
   padding-left: 16px;
@@ -114,4 +114,20 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: #323232;
+}
+
+.photogallery {
+  background-color: #fafafa;
+  padding: 16px;
+}
+.photogallery__title {
+  color: #323232;
+  padding-bottom: 11px;
+  font-size: 24px;
+  font-family: "NunitoSans";
+  font-weight: 700;
+}
+.photogallery__image {
+  width: 100%;
+  padding: 5px 0px;
 }/*# sourceMappingURL=bio.css.map */
