@@ -16,3 +16,9 @@
   align-items: center;
   flex-direction: $direction;
 }
+
+@mixin flex-align($direction, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
