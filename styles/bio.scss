@@ -12,6 +12,10 @@
     gap: 36px;
   }
 
+  @include desktop {
+    padding-left: 130px; //how to make bavbar bigger for desktop without affecting the links?//
+  }
+
   &__logo {
     @include flex-center(row);
     padding: 16px 0;
@@ -54,7 +58,7 @@
 
 .herosection {
   background-image: url(../assets/images/hero-bio.jpg);
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-color: rgba(50, 50, 50, 0.5);
   background-blend-mode: overlay;
@@ -75,10 +79,19 @@
       top: 230px;
       padding-left: 36px;
     }
+
+    @include desktop {
+      top: 330px;
+      padding-left: 130px;
+    }
   }
 
   @include tablet {
     height: 500px;
+  }
+
+  @include desktop {
+    height: 700px;
   }
 }
 
@@ -109,6 +122,11 @@
       height: 400px;
       width: 100%;
     }
+
+    @include desktop {
+      padding: 24px 220px 30px 220px;
+      height: 550px;
+    }
   }
 
   &__quote {
@@ -124,6 +142,11 @@
       font-weight: bolder;
     }
 
+    @include desktop {
+      padding: 0px 220px 10px 220px;
+      width: 90%; //not sure//
+    }
+
     &--vocalist {
       color: $primary-color-one;
       font-family: "NunitoSans";
@@ -135,6 +158,10 @@
         font-size: 15px;
         padding: 0px 90px;
         font-weight: 900;
+      }
+
+      @include desktop {
+        padding: 0px 220px;
       }
     }
   }
@@ -152,6 +179,10 @@
       padding: 36px 90px 25px 90px;
     }
 
+    @include desktop {
+      padding: 36px 220px 25px 220px;
+    }
+
     &--whole {
       @include tablet {
         display: flex;
@@ -159,6 +190,10 @@
         gap: 10px;
         line-height: 1.5rem;
         font-size: 14px;
+      }
+
+      @include desktop {
+        padding: 0px 220px 36px 220px;
       }
 
       .aboutbandsite__article--first {
@@ -193,6 +228,10 @@
     padding: 45px 36px 36px 36px;
   }
 
+  @include desktop {
+    padding: 45px 150px 36px 150px;
+  }
+
   &__title {
     color: $primary-color-one;
     padding-bottom: 11px;
@@ -221,6 +260,10 @@
         padding: 10px;
         flex-grow: 1;
       }
+
+      @include desktop {
+        width: 33%; //how to make image bigger?//
+      }
     }
   }
 }
@@ -236,6 +279,10 @@
   @include tablet {
     padding: 40px 36px;
     gap: 36px;
+  }
+
+  @include desktop {
+    padding: 40px 150px;
   }
 
   &__logo {
@@ -294,6 +341,11 @@
     @include tablet {
       @include flex-align(row, 0px);
       justify-content: space-between;
+    }
+
+    @include desktop {
+      @include flex-align(row, 60px);
+      justify-content: start;
     }
 
     .footer__management,

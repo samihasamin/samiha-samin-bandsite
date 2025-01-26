@@ -33,6 +33,11 @@ body {
     gap: 36px;
   }
 }
+@media (min-width: 1280px) {
+  .navbar {
+    padding-left: 130px;
+  }
+}
 .navbar__logo {
   display: flex;
   justify-content: center;
@@ -75,7 +80,7 @@ body {
 
 .herosection {
   background-image: url(../assets/images/hero-bio.jpg);
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-color: rgba(50, 50, 50, 0.5);
   background-blend-mode: overlay;
@@ -98,9 +103,20 @@ body {
     padding-left: 36px;
   }
 }
+@media (min-width: 1280px) {
+  .herosection__title {
+    top: 330px;
+    padding-left: 130px;
+  }
+}
 @media (min-width: 768px) {
   .herosection {
     height: 500px;
+  }
+}
+@media (min-width: 1280px) {
+  .herosection {
+    height: 700px;
   }
 }
 
@@ -132,6 +148,12 @@ body {
     width: 100%;
   }
 }
+@media (min-width: 1280px) {
+  .aboutbandsite__image {
+    padding: 24px 220px 30px 220px;
+    height: 550px;
+  }
+}
 .aboutbandsite__quote {
   color: #323232;
   font-family: "NunitoSans";
@@ -144,6 +166,12 @@ body {
     font-size: 21px;
     padding: 0px 90px 10px 90px;
     font-weight: bolder;
+  }
+}
+@media (min-width: 1280px) {
+  .aboutbandsite__quote {
+    padding: 0px 220px 10px 220px;
+    width: 90%;
   }
 }
 .aboutbandsite__quote--vocalist {
@@ -160,6 +188,11 @@ body {
     font-weight: 900;
   }
 }
+@media (min-width: 1280px) {
+  .aboutbandsite__quote--vocalist {
+    padding: 0px 220px;
+  }
+}
 .aboutbandsite__article {
   font-family: "NunitoSans";
   font-size: 14px;
@@ -174,6 +207,11 @@ body {
     padding: 36px 90px 25px 90px;
   }
 }
+@media (min-width: 1280px) {
+  .aboutbandsite__article {
+    padding: 36px 220px 25px 220px;
+  }
+}
 @media (min-width: 768px) {
   .aboutbandsite__article--whole {
     display: flex;
@@ -181,6 +219,11 @@ body {
     gap: 10px;
     line-height: 1.5rem;
     font-size: 14px;
+  }
+}
+@media (min-width: 1280px) {
+  .aboutbandsite__article--whole {
+    padding: 0px 220px 36px 220px;
   }
 }
 .aboutbandsite__article--whole .aboutbandsite__article--first {
@@ -217,6 +260,11 @@ body {
     padding: 45px 36px 36px 36px;
   }
 }
+@media (min-width: 1280px) {
+  .photogallery {
+    padding: 45px 150px 36px 150px;
+  }
+}
 .photogallery__title {
   color: #323232;
   padding-bottom: 11px;
@@ -247,6 +295,11 @@ body {
     flex-grow: 1;
   }
 }
+@media (min-width: 1280px) {
+  .photogallery__collection--image {
+    width: 33%;
+  }
+}
 
 .footer {
   background-color: #323232;
@@ -260,6 +313,11 @@ body {
   .footer {
     padding: 40px 36px;
     gap: 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer {
+    padding: 40px 150px;
   }
 }
 .footer__logo--desktop {
@@ -328,6 +386,14 @@ body {
     flex-direction: row;
     gap: 0px;
     justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__info {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: start;
   }
 }
 .footer__info .footer__management,
