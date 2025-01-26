@@ -5,7 +5,6 @@
 
 .navbar {
   background-color: $primary-color-one;
-  line-height: 2rem;
 
   @include tablet {
     display: flex;
@@ -34,11 +33,17 @@
   &__link {
     width: 50%;
     text-align: center;
-    color: $primary-color-three;
+    color: $primary-color-two;
     padding-bottom: 16px;
+    font-size: 13px;
 
     &:active {
-      border-bottom: 5px solid $primary-color-three;
+      border-bottom: 3px solid $primary-color-three;
+    }
+
+    &:hover {
+      border-bottom: 3px solid $primary-color-three;
+      color: $secondary-color-three;
     }
 
     @include tablet {
@@ -62,6 +67,18 @@
     position: absolute;
     top: 90px;
     padding-left: 16px;
+
+    @include tablet {
+      font-size: 60px;
+      font-weight: 700;
+      position: absolute;
+      top: 230px;
+      padding-left: 36px;
+    }
+  }
+
+  @include tablet {
+    height: 500px;
   }
 }
 
@@ -74,12 +91,24 @@
     font-family: "NunitoSans";
     font-size: 24px;
     font-weight: 700;
+
+    @include tablet {
+      font-size: 36px;
+      padding-left: 36px;
+      padding-top: 40px;
+    }
   }
 
   &__image {
     padding: 16px;
     height: 200px;
     width: 100%;
+
+    @include tablet {
+      padding: 24px 90px 30px 90px;
+      height: 400px;
+      width: 100%;
+    }
   }
 
   &__quote {
@@ -89,12 +118,24 @@
     font-weight: 700;
     padding: 0px 16px 16px 16px;
 
+    @include tablet {
+      font-size: 21px;
+      padding: 0px 90px 10px 90px;
+      font-weight: bolder;
+    }
+
     &--vocalist {
       color: $primary-color-one;
       font-family: "NunitoSans";
       font-size: 14px;
       font-weight: 700;
       padding: 0px 16px;
+
+      @include tablet {
+        font-size: 15px;
+        padding: 0px 90px;
+        font-weight: 900;
+      }
     }
   }
 
@@ -105,20 +146,41 @@
     color: $primary-color-one;
     padding: 16px;
 
-    &--first {
-      padding: 0px 16px 24px 16px;
-      font-family: "NunitoSans";
-      font-size: 14px;
-      font-weight: 400;
-      color: $primary-color-one;
+    @include tablet {
+      font-size: 24px;
+      font-weight: 500;
+      padding: 36px 90px 25px 90px;
     }
 
-    &--second {
-      padding: 0px 16px 16px 16px;
-      font-family: "NunitoSans";
-      font-size: 14px;
-      font-weight: 400;
-      color: $primary-color-one;
+    &--whole {
+      @include tablet {
+        display: flex;
+        padding: 0px 90px 36px 90px;
+        gap: 10px;
+        line-height: 1.5rem;
+        font-size: 14px;
+      }
+
+      .aboutbandsite__article--first {
+        padding: 0px 16px 24px 16px;
+        font-family: "NunitoSans";
+        font-size: 14px;
+        font-weight: 400;
+        color: $primary-color-one;
+        @include tablet {
+          padding: 0px;
+        }
+      }
+      .aboutbandsite__article--second {
+        padding: 0px 16px 16px 16px;
+        font-family: "NunitoSans";
+        font-size: 14px;
+        font-weight: 400;
+        color: $primary-color-one;
+        @include tablet {
+          padding: 0px;
+        }
+      }
     }
   }
 }
@@ -127,17 +189,39 @@
   background-color: $secondary-color-three;
   padding: 16px;
 
+  @include tablet {
+    padding: 45px 36px 36px 36px;
+  }
+
   &__title {
     color: $primary-color-one;
     padding-bottom: 11px;
     font-size: 24px;
     font-family: "NunitoSans";
     font-weight: 700;
+
+    @include tablet {
+      font-size: 36px;
+      padding-left: 10px;
+    }
   }
 
-  &__image {
-    width: 100%;
-    padding: 5px 0px;
+  &__collection {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &--image {
+      width: 100%;
+      padding: 5px 0px;
+
+      @include tablet {
+        width: 32%;
+        padding: 10px;
+        flex-grow: 1;
+      }
+    }
   }
 }
 
@@ -149,35 +233,81 @@
   flex-direction: column;
   gap: 16px;
 
+  @include tablet {
+    padding: 40px 36px;
+    gap: 36px;
+  }
+
   &__logo {
     &--desktop {
       display: none;
+
+      @include tablet {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &--mobile {
+      padding-top: 40px;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__brand {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
     }
   }
 
   &__social {
     @include flex-align(column, 16px);
+
+    @include tablet {
+      @include flex-align(row, 20px);
+    }
     &--title {
       font-family: "NunitoSans";
       font-size: 24px;
       font-weight: 700;
+
+      @include tablet {
+        font-size: 36px;
+      }
     }
     &--icon {
       @include flex-align(row, 30px);
+
+      @include tablet {
+        align-items: center;
+      }
     }
   }
 
   &__info {
     @include flex-align(column, 24px);
 
+    @include tablet {
+      @include flex-align(row, 0px);
+      justify-content: space-between;
+    }
+
     .footer__management,
     .footer__artist-group,
     .footer__entertainment {
       @include flex-align(column, 16px);
 
+      @include tablet {
+        gap: 24px;
+      }
+
       h3 {
         font-family: "NunitoSans";
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 700;
       }
 
@@ -186,6 +316,16 @@
         font-size: 13px;
         font-weight: 400;
       }
+    }
+  }
+
+  &__copyright {
+    font-family: "NunitoSans";
+    font-size: 11px;
+    font-weight: 400;
+
+    @include tablet {
+      font-size: 13px;
     }
   }
 }
