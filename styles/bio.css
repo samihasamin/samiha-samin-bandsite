@@ -75,11 +75,6 @@ body {
 }
 @media (min-width: 768px) {
   .navbar__link {
-    padding: 22px 0;
-  }
-}
-@media (min-width: 1280px) {
-  .navbar__link {
     padding: 32px 0;
     font-size: 14px;
   }
@@ -378,7 +373,7 @@ body {
   .footer__social {
     display: flex;
     flex-direction: row;
-    gap: 48px;
+    gap: 60px;
     align-items: center;
   }
 }
