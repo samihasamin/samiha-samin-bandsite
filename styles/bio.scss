@@ -43,6 +43,7 @@
 
     &:active {
       border-bottom: 3px solid $primary-color-three;
+      font-weight: bold;
     }
 
     &:hover {
@@ -52,6 +53,11 @@
 
     @include tablet {
       padding: 22px 0;
+    }
+
+    @include desktop {
+      padding: 32px 0;
+      font-size: 14px;
     }
   }
 }
@@ -81,7 +87,7 @@
     }
 
     @include desktop {
-      top: 330px;
+      top: 280px;
       padding-left: 130px;
     }
   }
@@ -91,7 +97,8 @@
   }
 
   @include desktop {
-    height: 700px;
+    background-position: center;
+    height: 630px;
   }
 }
 
@@ -110,6 +117,11 @@
       padding-left: 36px;
       padding-top: 40px;
     }
+
+    @include desktop {
+      padding-left: 115px;
+      padding-top: 48px;
+    }
   }
 
   &__image {
@@ -124,7 +136,7 @@
     }
 
     @include desktop {
-      padding: 24px 220px 30px 220px;
+      padding: 28px 200px 30px 200px;
       height: 550px;
     }
   }
@@ -143,8 +155,8 @@
     }
 
     @include desktop {
-      padding: 0px 220px 10px 220px;
-      width: 90%; //not sure//
+      padding: 0px 200px 10px 200px;
+      width: 88%;
     }
 
     &--vocalist {
@@ -161,7 +173,8 @@
       }
 
       @include desktop {
-        padding: 0px 220px;
+        font-size: 16px;
+        padding: 0px 200px;
       }
     }
   }
@@ -180,7 +193,7 @@
     }
 
     @include desktop {
-      padding: 36px 220px 25px 220px;
+      padding: 36px 200px 25px 200px;
     }
 
     &--whole {
@@ -193,7 +206,7 @@
       }
 
       @include desktop {
-        padding: 0px 220px 36px 220px;
+        padding: 0px 200px 36px 200px;
       }
 
       .aboutbandsite__article--first {
@@ -229,7 +242,7 @@
   }
 
   @include desktop {
-    padding: 45px 150px 36px 150px;
+    padding: 45px 130px 36px 130px;
   }
 
   &__title {
@@ -254,6 +267,11 @@
     &--image {
       width: 100%;
       padding: 5px 0px;
+      filter: grayscale(100%);
+
+      &:hover {
+        filter: grayscale(0%);
+      }
 
       @include tablet {
         width: 32%;
@@ -315,8 +333,14 @@
     @include flex-align(column, 16px);
 
     @include tablet {
-      @include flex-align(row, 20px);
+      @include flex-align(row, 36px);
     }
+
+    @include desktop {
+      @include flex-align(row, 48px);
+      align-items: center;
+    }
+
     &--title {
       font-family: "NunitoSans";
       font-size: 24px;
@@ -331,6 +355,12 @@
 
       @include tablet {
         align-items: center;
+        position: relative;
+        top: 4px;
+      }
+
+      @include desktop {
+        top: 5px;
       }
     }
   }
@@ -344,8 +374,8 @@
     }
 
     @include desktop {
-      @include flex-align(row, 60px);
-      justify-content: start;
+      @include flex-align(row, 80px);
+      justify-content: flex-start;
     }
 
     .footer__management,
@@ -361,12 +391,24 @@
         font-family: "NunitoSans";
         font-size: 13px;
         font-weight: 700;
+
+        @include desktop {
+          font-size: 14px;
+        }
       }
 
       p {
         font-family: "NunitoSans";
         font-size: 13px;
         font-weight: 400;
+        @include desktop {
+          font-size: 14px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: $primary-color-three;
       }
     }
   }
@@ -378,6 +420,11 @@
 
     @include tablet {
       font-size: 13px;
+    }
+
+    @include desktop {
+      font-size: 14px;
+      padding: 18px 0px;
     }
   }
 }
