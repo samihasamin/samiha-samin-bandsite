@@ -239,31 +239,33 @@ body {
 .aboutbandsite__article--whole .aboutbandsite__article--first {
   padding: 0px 16px 24px 16px;
   font-family: "NunitoSans";
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   color: #323232;
 }
 @media (min-width: 768px) {
   .aboutbandsite__article--whole .aboutbandsite__article--first {
+    font-size: 14px;
     padding: 0px;
   }
 }
 .aboutbandsite__article--whole .aboutbandsite__article--second {
   padding: 0px 16px 16px 16px;
   font-family: "NunitoSans";
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   color: #323232;
 }
 @media (min-width: 768px) {
   .aboutbandsite__article--whole .aboutbandsite__article--second {
+    font-size: 14px;
     padding: 0px;
   }
 }
 
 .photogallery {
   background-color: #fafafa;
-  padding: 16px;
+  padding: 16px 16px 5px 16px;
 }
 @media (min-width: 768px) {
   .photogallery {
@@ -288,6 +290,11 @@ body {
     padding-left: 10px;
   }
 }
+@media (min-width: 1280px) {
+  .photogallery__title {
+    padding-bottom: 25px;
+  }
+}
 @media (min-width: 768px) {
   .photogallery__collection {
     display: flex;
@@ -307,11 +314,6 @@ body {
     width: 32%;
     padding: 10px;
     flex-grow: 1;
-  }
-}
-@media (min-width: 1280px) {
-  .photogallery__collection--image {
-    width: 33%;
   }
 }
 
@@ -446,7 +448,7 @@ body {
   font-size: 13px;
   font-weight: 700;
 }
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
   .footer__info .footer__management h3,
   .footer__info .footer__artist-group h3,
   .footer__info .footer__entertainment h3 {
@@ -460,7 +462,7 @@ body {
   font-size: 13px;
   font-weight: 400;
 }
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
   .footer__info .footer__management p,
   .footer__info .footer__artist-group p,
   .footer__info .footer__entertainment p {
@@ -480,12 +482,12 @@ body {
 }
 @media (min-width: 768px) {
   .footer__copyright {
-    font-size: 13px;
+    padding: 16px 0px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1280px) {
   .footer__copyright {
-    font-size: 14px;
     padding: 18px 0px;
   }
 }/*# sourceMappingURL=bio.css.map */
