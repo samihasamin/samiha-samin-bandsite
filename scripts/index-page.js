@@ -105,16 +105,20 @@ userComments.forEach((userComment) => {
   const eachComment = document.createElement("div");
   eachComment.classList.add("comments__users-textbox-content");
 
+  const nameAndDate = document.createElement("div");
+  nameAndDate.classList.add("comments__users-textbox-content-nameanddate");
+  eachComment.appendChild(nameAndDate);
+
   // Create name
 
   const userName = document.createElement("h3");
-  userName.classList.add("comments__users-textbox-content-name");
+  userName.classList.add("comments__users-textbox-content-nameanddate-name");
   userName.textContent = userComment.name;
 
   //Create date
 
   const userDate = document.createElement("p");
-  userDate.classList.add("comments__users-textbox-content-date");
+  userDate.classList.add("comments__users-textbox-content-nameanddate-date");
   userDate.textContent = userComment.date;
 
   // Create text
@@ -123,8 +127,8 @@ userComments.forEach((userComment) => {
   userText.classList.add("comments__users-textbox-content-text");
   userText.textContent = userComment.text;
 
-  eachComment.appendChild(userName);
-  eachComment.appendChild(userDate);
+  nameAndDate.appendChild(userName);
+  nameAndDate.appendChild(userDate);
   eachComment.appendChild(userText);
 
   commentTextbox.appendChild(commentAvatar);

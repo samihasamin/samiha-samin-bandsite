@@ -524,6 +524,12 @@ body {
   gap: 16px;
   width: 100%;
 }
+.comments__form-group-two-namesection-label {
+  padding-bottom: 4px;
+  font-size: 10px;
+  font-weight: bolder;
+  color: #afafaf;
+}
 .comments__form-group-two-namesection-nameinput {
   height: 48px;
   width: 100%;
@@ -544,11 +550,8 @@ body {
   color: #323232;
   font-weight: 500;
 }
-.comments__form-group-two-namesection-label {
-  padding-bottom: 4px;
-  font-size: 10px;
-  font-weight: bolder;
-  color: #afafaf;
+.comments__form-group-two-namesection-nameinput:hover {
+  border: 1px solid #323232;
 }
 .comments__form-group-two-messagesection-message {
   height: 120px;
@@ -570,6 +573,9 @@ body {
   color: #323232;
   font-weight: 500;
 }
+.comments__form-group-two-messagesection-message:hover {
+  border: 1px solid #323232;
+}
 .comments__form-group-two-messagesection-label {
   padding-bottom: 4px;
   font-size: 10px;
@@ -583,9 +589,44 @@ body {
   background-color: #323232;
   color: white;
   border-radius: 4px;
+  cursor: pointer;
   font-size: 15px;
 }
+.comments__form-group-two-button:hover {
+  background-color: #000000;
+}
 .comments__users {
-  padding: 16px;
   height: 60%;
+  width: 100%;
+  padding: 16px;
+}
+.comments__users-textbox {
+  padding: 16px 16px 16px 64px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  border-collapse: collapse;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.comments__users-textbox-avatar {
+  background-color: #e1e1e1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.comments__users-textbox-content-nameanddate {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+.comments__users-textbox-content-nameanddate-name {
+  font-size: 14px;
+}
+.comments__users-textbox-content-nameanddate-date {
+  font-size: 14px;
+  color: #afafaf;
+}
+.comments__users-textbox-content-text {
+  font-size: 13px;
 }/*# sourceMappingURL=bio.css.map */

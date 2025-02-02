@@ -261,6 +261,12 @@
       width: 100%;
 
       &-namesection {
+        &-label {
+          padding-bottom: 4px;
+          font-size: 10px;
+          font-weight: bolder;
+          color: $primary-color-two;
+        }
         &-nameinput {
           height: 48px;
           width: 100%;
@@ -275,13 +281,10 @@
             color: $primary-color-one;
             font-weight: 500;
           }
-        }
 
-        &-label {
-          padding-bottom: 4px;
-          font-size: 10px;
-          font-weight: bolder;
-          color: $primary-color-two;
+          &:hover {
+            border: 1px solid $primary-color-one;
+          }
         }
       }
 
@@ -300,6 +303,10 @@
             color: $primary-color-one;
             font-weight: 500;
           }
+
+          &:hover {
+            border: 1px solid $primary-color-one;
+          }
         }
 
         &-label {
@@ -313,12 +320,50 @@
       &-button {
         @include button;
         font-size: 15px;
+
+        &:hover {
+          background-color: $secondary-color-one;
+        }
       }
     }
   }
 
   &__users {
-    padding: 16px;
     height: 60%;
+    width: 100%;
+    padding: 16px;
+
+    &-textbox {
+      padding: 16px 16px 16px 64px;
+      border-top: 1px solid $secondary-color-two;
+      border-bottom: 1px solid $secondary-color-two;
+      border-collapse: collapse;
+      @include flex-align(row, 16px);
+      &-avatar {
+        background-color: $secondary-color-two;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      &-content {
+        &-nameanddate {
+          @include flex-align(row, 80px);
+
+          &-name {
+            font-size: 14px;
+          }
+
+          &-date {
+            font-size: 14px;
+            color: $primary-color-two;
+          }
+        }
+
+        &-text {
+          font-size: 13px;
+        }
+      }
+    }
   }
 }
