@@ -1,7 +1,7 @@
-@use "./partials/global";
+@use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 @use "./partials/typography" as *;
-@use "./partials/variables" as *;
+@import "./partials/global";
 
 .herosection {
   background-image: url(../assets/images/hero-bio.jpg);
@@ -226,5 +226,99 @@
         flex-grow: 1;
       }
     }
+  }
+}
+
+.comments {
+  width: 100%;
+  margin: 0 auto;
+
+  &__header {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 16px 16px 0px 16px;
+    color: $primary-color-one;
+  }
+
+  &__form {
+    @include flex-align(row, 16px);
+    padding: 16px 16px 16px 64px;
+    position: relative;
+    height: 40%;
+    &-group-one {
+      &-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 40px;
+        left: 20px;
+      }
+    }
+
+    &-group-two {
+      @include flex-align(column, 16px);
+      width: 100%;
+
+      &-namesection {
+        &-nameinput {
+          height: 48px;
+          width: 100%;
+          border: 1px solid $secondary-color-two;
+          border-radius: 4px;
+          background-color: $secondary-color-three;
+          padding: 12px;
+
+          &::placeholder {
+            font-family: "NunitoSans";
+            font-weight: 13px;
+            color: $primary-color-one;
+            font-weight: 500;
+          }
+        }
+
+        &-label {
+          padding-bottom: 4px;
+          font-size: 10px;
+          font-weight: bolder;
+          color: $primary-color-two;
+        }
+      }
+
+      &-messagesection {
+        &-message {
+          height: 120px;
+          width: 100%;
+          border: 1px solid $secondary-color-two;
+          border-radius: 4px;
+          background-color: $secondary-color-three;
+          padding: 12px;
+
+          &::placeholder {
+            font-family: "NunitoSans";
+            font-weight: 13px;
+            color: $primary-color-one;
+            font-weight: 500;
+          }
+        }
+
+        &-label {
+          padding-bottom: 4px;
+          font-size: 10px;
+          font-weight: bolder;
+          color: $primary-color-two;
+        }
+      }
+
+      &-button {
+        @include button;
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__users {
+    padding: 16px;
+    height: 60%;
   }
 }

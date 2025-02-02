@@ -34,10 +34,10 @@
     margin: 10px 0;
 
     &--label {
-      font-size: 13px;
+      padding-bottom: 4px;
+      font-size: 10px;
+      font-weight: bolder;
       color: $primary-color-two;
-      font-weight: 700;
-      padding-bottom: 5px;
     }
 
     &--date {
@@ -62,12 +62,8 @@
     }
 
     &--button {
-      height: 40px;
-      box-shadow: none;
-      border-style: none;
-      background-color: $primary-color-one;
-      color: $primary-color-three;
-      border-radius: 4px;
+      @include button;
+      font-size: 15px;
     }
   }
 }
@@ -116,14 +112,9 @@
     }
 
     button {
-      height: 40px;
+      @include button;
       width: 160px;
       padding: 10px 32px;
-      box-shadow: none;
-      border-style: none;
-      background-color: $primary-color-one;
-      color: $primary-color-three;
-      border-radius: 4px;
       cursor: pointer;
     }
   }

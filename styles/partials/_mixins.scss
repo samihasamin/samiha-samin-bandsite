@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @mixin tablet {
   @media (min-width: 768px) {
     @content;
@@ -21,4 +23,13 @@
   display: flex;
   flex-direction: $direction;
   gap: $gap;
+}
+
+@mixin button {
+  height: 40px;
+  box-shadow: none;
+  border-style: none;
+  background-color: $primary-color-one;
+  color: $primary-color-three;
+  border-radius: 4px;
 }
