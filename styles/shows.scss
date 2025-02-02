@@ -7,11 +7,19 @@
   background-color: $primary-color-three;
   padding-bottom: 6px;
 
+  @include desktop {
+    display: flex;
+  }
+
   &__title {
     font-size: 24px;
     font-weight: 700;
     color: $primary-color-one;
     padding-bottom: 30px;
+
+    @include desktop {
+      width: 30%;
+    }
   }
 
   &__list {
@@ -118,5 +126,16 @@
       border-radius: 4px;
       cursor: pointer;
     }
+  }
+
+  @include desktop {
+    &__head--label:nth-child(1) {
+      width: 35%;
+    }
+  }
+
+  &__head--label:nth-child(2),
+  &__head--label:nth-child(3) {
+    width: 23%;
   }
 }
