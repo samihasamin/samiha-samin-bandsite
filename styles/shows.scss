@@ -2,3 +2,111 @@
 @use "./partials/typography" as *;
 @use "./partials/variables" as *;
 @import "./partials/global";
+
+.shows-container {
+  background-color: $primary-color-three;
+  padding-bottom: 6px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $primary-color-one;
+    padding-bottom: 30px;
+  }
+
+  &__list {
+    @include tablet {
+      display: none;
+    }
+
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $secondary-color-two;
+    padding: 16px;
+    margin: 10px 0;
+
+    &--label {
+      font-size: 13px;
+      color: $primary-color-two;
+      font-weight: 700;
+      padding-bottom: 5px;
+    }
+
+    &--date {
+      font-size: 14px;
+      color: $primary-color-one;
+      font-weight: 700;
+      padding-bottom: 10px;
+    }
+
+    &--venue {
+      font-size: 14px;
+      color: $primary-color-one;
+      font-weight: 500;
+      padding-bottom: 10px;
+    }
+
+    &--location {
+      font-size: 14px;
+      color: $primary-color-one;
+      font-weight: 500;
+      padding-bottom: 10px;
+    }
+
+    &--button {
+      height: 40px;
+      box-shadow: none;
+      border-style: none;
+      background-color: $primary-color-one;
+      color: $primary-color-three;
+      border-radius: 4px;
+    }
+  }
+}
+
+.shows-table {
+  display: none;
+
+  @include tablet {
+    display: block;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__head {
+    &--row {
+      .shows-table__head--label {
+        padding: 20px;
+        text-align: left;
+        font-size: 13px;
+        color: $primary-color-two;
+      }
+    }
+  }
+
+  &__body {
+    &--row {
+      .shows-table__body--date {
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      td {
+        border-bottom: 1px solid $secondary-color-two;
+        padding: 20px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  button {
+    height: 40px;
+    width: 160px;
+    padding: 10px 32px;
+    box-shadow: none;
+    border-style: none;
+    background-color: $primary-color-one;
+    color: $primary-color-three;
+    border-radius: 4px;
+  }
+}
