@@ -626,9 +626,11 @@ body {
     font-size: 12px;
   }
 }
-.comments__form-group-two-buttonbox {
-  display: flex;
-  justify-content: flex-end;
+@media (min-width: 768px) {
+  .comments__form-group-two-buttonbox {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 .comments__form-group-two-buttonbox-button {
   height: 40px;
@@ -639,6 +641,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
   font-size: 15px;
+  width: 100%;
 }
 .comments__form-group-two-buttonbox-button:hover {
   background-color: #000000;
@@ -688,6 +691,7 @@ body {
   }
 }
 .comments__users-textbox-content {
+  color: #323232;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -705,4 +709,10 @@ body {
 }
 .comments__users-textbox-content-text {
   font-size: 13px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .comments__users-textbox-content-text {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=bio.css.map */

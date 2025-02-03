@@ -353,11 +353,14 @@
       }
 
       &-buttonbox {
-        display: flex;
-        justify-content: flex-end;
+        @include tablet {
+          display: flex;
+          justify-content: flex-end;
+        }
         &-button {
           @include button;
           font-size: 15px;
+          width: 100%;
 
           &:hover {
             background-color: $secondary-color-one;
@@ -409,6 +412,7 @@
       }
 
       &-content {
+        color: $primary-color-one;
         @include flex-align(column, 16px);
         &-nameanddate {
           display: flex;
@@ -426,6 +430,11 @@
 
         &-text {
           font-size: 13px;
+          font-weight: 500;
+
+          @include tablet {
+            font-size: 14px;
+          }
         }
       }
     }

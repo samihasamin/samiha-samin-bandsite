@@ -150,6 +150,10 @@
     &--button {
       @include button;
       font-size: 15px;
+
+      &:hover {
+        background-color: $secondary-color-one;
+      }
     }
   }
 }
@@ -216,6 +220,10 @@
       @include button;
       width: 160px;
       padding: 10px 32px;
+
+      &:hover {
+        background-color: $secondary-color-one;
+      }
     }
   }
 
