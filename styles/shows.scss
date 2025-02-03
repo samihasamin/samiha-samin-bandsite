@@ -3,6 +3,85 @@
 @use "./partials/variables" as *;
 @import "./partials/global";
 
+.shows-herosection {
+  background-image: url(../assets/images/hero-shows.jpg);
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 16/9;
+  background-color: rgba(50, 50, 50, 0.5);
+  background-blend-mode: overlay;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 16px;
+  position: relative;
+
+  @include tablet {
+    padding: 36px;
+  }
+
+  @include desktop {
+    padding: 100px;
+    @include flex-align(row, 48px);
+    justify-content: space-between;
+  }
+
+  &__text {
+    &-album {
+      font-size: 14px;
+      color: $primary-color-three;
+      line-height: 32px;
+      font-weight: 400;
+
+      @include tablet {
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+
+    &-title {
+      color: $primary-color-three;
+      padding-top: 15px;
+      width: 80%;
+
+      @include tablet {
+        width: 80%;
+        font-size: 60px;
+        font-weight: 700;
+      }
+    }
+
+    @include desktop {
+      padding-top: 150px;
+      width: 48%;
+    }
+  }
+
+  &__soundcloud {
+    padding: 20px 0px;
+    &-populartracks {
+      height: 120px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+      @include tablet {
+        height: 150px;
+        width: 450px;
+      }
+    }
+
+    @include desktop {
+      padding-top: 197px;
+    }
+  }
+}
+
 .shows-container {
   background-color: $primary-color-three;
   padding-bottom: 6px;
@@ -15,10 +94,17 @@
     font-size: 24px;
     font-weight: 700;
     color: $primary-color-one;
-    padding-bottom: 30px;
+    padding: 24px 16px 14px 16px;
+
+    @include tablet {
+      font-size: 36px;
+      padding: 48px 0px 0px 36px;
+    }
 
     @include desktop {
       width: 30%;
+      font-size: 36px;
+      padding: 48px 0px 0px 100px;
     }
   }
 
@@ -74,6 +160,7 @@
   @include tablet {
     display: block;
     width: 100%;
+    margin: 0 auto;
     border-collapse: separate;
     border-spacing: 0px 10px;
     padding: 24px 18px;
@@ -88,6 +175,10 @@
           font-weight: 700;
           color: $primary-color-two;
         }
+      }
+
+      th {
+        width: 20%;
       }
     }
 
@@ -107,6 +198,16 @@
           border-bottom: 1px solid $secondary-color-two;
           padding: 12px 18px;
           font-size: 14px;
+        }
+
+        &:hover {
+          background-color: $secondary-color-three;
+          cursor: pointer;
+        }
+
+        &:active {
+          background-color: $secondary-color-two;
+          cursor: pointer;
         }
       }
     }

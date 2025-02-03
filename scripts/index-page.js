@@ -54,15 +54,19 @@ messageInput.setAttribute("name", "message");
 messageContainer.appendChild(nameDiv);
 messageContainer.appendChild(messageDiv);
 
+const buttonBox = document.createElement("div");
+buttonBox.classList.add("comments__form-group-two-buttonbox");
+messageContainer.appendChild(buttonBox);
+
 const commentButton = document.createElement("button");
-commentButton.classList.add("comments__form-group-two-button");
+commentButton.classList.add("comments__form-group-two-buttonbox-button");
 commentButton.setAttribute("type", "submit");
 commentButton.textContent = "COMMENT";
 
 commentForm.appendChild(messageContainer);
 messageDiv.appendChild(messageLabel);
 messageDiv.appendChild(messageInput);
-messageContainer.appendChild(commentButton);
+buttonBox.appendChild(commentButton);
 
 const userComments = [
   {
@@ -97,8 +101,13 @@ userComments.forEach((userComment) => {
 
   // Comment avatar
 
-  const commentAvatar = document.createElement("div");
-  commentAvatar.classList.add("comments__users-textbox-avatar");
+  const userAvatardiv = document.createElement("div");
+  userAvatardiv.classList.add("comments__users-textbox-avatar");
+  commentTextbox.appendChild(userAvatardiv);
+
+  const commentAvatar = document.createElement("img");
+  commentAvatar.setAttribute("placeholder", "user-avatar");
+  commentAvatar.classList.add("comments__users-textbox-avatar-img");
 
   //Each user container
 
@@ -131,7 +140,7 @@ userComments.forEach((userComment) => {
   nameAndDate.appendChild(userDate);
   eachComment.appendChild(userText);
 
-  commentTextbox.appendChild(commentAvatar);
+  userAvatardiv.appendChild(commentAvatar);
   commentTextbox.appendChild(eachComment);
 
   commentContainer.appendChild(commentTextbox);

@@ -238,6 +238,15 @@
     font-weight: 700;
     padding: 16px 16px 0px 16px;
     color: $primary-color-one;
+
+    @include tablet {
+      font-size: 36px;
+      padding: 48px 0px 0px 36px;
+    }
+
+    @include desktop {
+      padding-left: 100px;
+    }
   }
 
   &__form {
@@ -245,7 +254,19 @@
     padding: 16px 16px 16px 64px;
     position: relative;
     height: 40%;
+
+    @include tablet {
+      padding: 40px 80px 30px 80px;
+      display: flex;
+
+      @include desktop {
+        padding: 18px 400px 20px 400px;
+      }
+    }
     &-group-one {
+      @include tablet {
+        padding-top: 20px;
+      }
       &-avatar {
         width: 40px;
         height: 40px;
@@ -253,6 +274,12 @@
         position: absolute;
         top: 40px;
         left: 20px;
+
+        @include tablet {
+          position: static;
+          width: 48px;
+          height: 48px;
+        }
       }
     }
 
@@ -266,6 +293,10 @@
           font-size: 10px;
           font-weight: bolder;
           color: $primary-color-two;
+
+          @include tablet {
+            font-size: 12px;
+          }
         }
         &-nameinput {
           height: 48px;
@@ -314,15 +345,28 @@
           font-size: 10px;
           font-weight: bolder;
           color: $primary-color-two;
+
+          @include tablet {
+            font-size: 12px;
+          }
         }
       }
 
-      &-button {
-        @include button;
-        font-size: 15px;
+      &-buttonbox {
+        display: flex;
+        justify-content: flex-end;
+        &-button {
+          @include button;
+          font-size: 15px;
 
-        &:hover {
-          background-color: $secondary-color-one;
+          &:hover {
+            background-color: $secondary-color-one;
+          }
+
+          @include tablet {
+            height: 40px;
+            width: 150px;
+          }
         }
       }
     }
@@ -333,22 +377,42 @@
     width: 100%;
     padding: 16px;
 
+    @include tablet {
+      padding: 0px 80px 40px 80px;
+    }
+
+    @include desktop {
+      padding: 0px 400px 40px 400px;
+    }
+
     &-textbox {
-      padding: 16px 16px 16px 64px;
       border-top: 1px solid $secondary-color-two;
-      border-bottom: 1px solid $secondary-color-two;
       border-collapse: collapse;
+      padding: 16px 0px;
       @include flex-align(row, 16px);
+
+      &:last-child {
+        border-bottom: 1px solid $secondary-color-two;
+      }
       &-avatar {
-        background-color: $secondary-color-two;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
+        &-img {
+          background: $secondary-color-two;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+        }
+
+        @include tablet {
+          width: 48px;
+          height: 48px;
+        }
       }
 
       &-content {
+        @include flex-align(column, 16px);
         &-nameanddate {
-          @include flex-align(row, 80px);
+          display: flex;
+          justify-content: space-between;
 
           &-name {
             font-size: 14px;

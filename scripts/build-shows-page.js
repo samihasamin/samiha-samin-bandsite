@@ -106,7 +106,7 @@ tableHeader.classList.add("shows-table__head");
 const tableHeaderRow = document.createElement("tr");
 tableHeaderRow.classList.add("shows-table__head--row");
 
-const showsHeader = ["DATE", "VENUE", "LOCATION"];
+const showsHeader = ["DATE", "VENUE", "LOCATION", ""];
 
 showsHeader.forEach((headerContent) => {
   const labelHeader = document.createElement("th");
