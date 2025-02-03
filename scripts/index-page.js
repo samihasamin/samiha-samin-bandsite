@@ -68,6 +68,31 @@ messageDiv.appendChild(messageLabel);
 messageDiv.appendChild(messageInput);
 buttonBox.appendChild(commentButton);
 
+// validation
+commentForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  nameInput.style.border = "";
+  messageInput.style.border = "";
+
+  let valid = true;
+
+  if (!nameInput.value) {
+    nameInput.style.border = "2px solid #d22d2d";
+
+    valid = false;
+  }
+
+  if (!messageInput.value) {
+    messageInput.style.border = "2px solid #d22d2d";
+
+    valid = false;
+  }
+
+  if (valid) {
+    commentForm.reset();
+  }
+});
+
 const userComments = [
   {
     name: "Victor Pinto",
