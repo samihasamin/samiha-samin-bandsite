@@ -47,7 +47,7 @@
   &__title {
     display: flex;
     align-items: center;
-    padding: 24px 16px 0px 16px;
+    padding: 24px 16px 8px 16px;
     color: $primary-color-one;
     font-family: "NunitoSans";
     font-size: 24px;
@@ -57,6 +57,7 @@
       font-size: 36px;
       padding-left: 36px;
       padding-top: 40px;
+      padding-bottom: 36px;
     }
 
     @include desktop {
@@ -65,20 +66,34 @@
     }
   }
 
-  &__image {
-    padding: 16px;
+  &__imagediv {
     height: 200px;
-    width: 100%;
+    margin-bottom: 16px;
+    overflow: hidden;
+    @include flex-center(row);
 
     @include tablet {
-      padding: 24px 90px 30px 90px;
       height: 400px;
-      width: 100%;
+      margin-bottom: 18px;
     }
 
     @include desktop {
-      padding: 28px 200px 30px 200px;
       height: 550px;
+      margin-bottom: 36px;
+    }
+    &-image {
+      width: 100%;
+      height: auto;
+      padding: 16px;
+      object-fit: cover;
+
+      @include tablet {
+        padding: 24px 90px 30px 90px;
+      }
+
+      @include desktop {
+        padding: 28px 200px 30px 200px;
+      }
     }
   }
 

@@ -60,6 +60,11 @@ body {
       padding: 32px 0;
       font-size: 14px;
     }
+
+    a {
+      text-decoration: none;
+      color: $primary-color-three;
+    }
   }
 }
 

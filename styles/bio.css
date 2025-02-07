@@ -79,6 +79,10 @@ body {
     font-size: 14px;
   }
 }
+.navbar__link a {
+  text-decoration: none;
+  color: white;
+}
 
 .footer {
   background-color: #323232;
@@ -301,7 +305,7 @@ body {
 .aboutbandsite__title {
   display: flex;
   align-items: center;
-  padding: 24px 16px 0px 16px;
+  padding: 24px 16px 8px 16px;
   color: #323232;
   font-family: "NunitoSans";
   font-size: 24px;
@@ -312,6 +316,7 @@ body {
     font-size: 36px;
     padding-left: 36px;
     padding-top: 40px;
+    padding-bottom: 36px;
   }
 }
 @media (min-width: 1280px) {
@@ -320,22 +325,42 @@ body {
     padding-top: 48px;
   }
 }
-.aboutbandsite__image {
-  padding: 16px;
+.aboutbandsite__imagediv {
   height: 200px;
-  width: 100%;
+  margin-bottom: 16px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 @media (min-width: 768px) {
-  .aboutbandsite__image {
-    padding: 24px 90px 30px 90px;
+  .aboutbandsite__imagediv {
     height: 400px;
-    width: 100%;
+    margin-bottom: 18px;
   }
 }
 @media (min-width: 1280px) {
-  .aboutbandsite__image {
-    padding: 28px 200px 30px 200px;
+  .aboutbandsite__imagediv {
     height: 550px;
+    margin-bottom: 36px;
+  }
+}
+.aboutbandsite__imagediv-image {
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .aboutbandsite__imagediv-image {
+    padding: 24px 90px 30px 90px;
+  }
+}
+@media (min-width: 1280px) {
+  .aboutbandsite__imagediv-image {
+    padding: 28px 200px 30px 200px;
   }
 }
 .aboutbandsite__quote {
