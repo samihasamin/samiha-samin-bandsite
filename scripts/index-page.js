@@ -1,3 +1,7 @@
+import BandSiteApi from "./bandsite-api.js";
+
+const API_KEY = "3696c394-752b-4ce8-92d2-857ffb646b8d";
+
 const comments = document.querySelector(".comments");
 
 const commentHeader = document.createElement("h1");
@@ -70,7 +74,7 @@ buttonBox.appendChild(commentButton);
 
 // validation
 
-commentForm.addEventListener("submit", function (event) {
+commentForm.addEventListener("submit", async function (event) {
   event.preventDefault();
   nameInput.style.border = "";
   messageInput.style.border = "";
@@ -90,27 +94,31 @@ commentForm.addEventListener("submit", function (event) {
   }
 
   if (valid) {
+    const userComment = { name: nameInput.value, comment: messageInput.value };
+    const comment = new BandSiteApi(API_KEY);
+    //comment.postComment(userComment);
+    const response = await comment.postComment(userComment);
     commentForm.reset();
   }
 });
 
-const userComments = [
-  {
-    name: "Victor Pinto",
-    date: "11/02/2023",
-    text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves deserves reverance. Let us apprexiate this for what it is and what it contains.",
-  },
-  {
-    name: "Christina Cabera",
-    date: "10/28/2023",
-    text: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    name: "Isaac Tadesse",
-    date: "10/20/2023",
-    text: "I cannot stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Cannot get enough.",
-  },
-];
+async function setComments() {
+  const comment = new BandSiteApi(API_KEY);
+  await comment.getComments().then((userComment) => {
+    userComment.sort((a, b) => b.timestamp - a.timestamp);
+    userComment.forEach((postcomment) => {
+      console.log(postcomment);
+      const commentEl = createCommentElement(
+        postcomment.name,
+        new Date(),
+        postcomment.comment
+      );
+      commentContainer.appendChild(commentEl);
+    });
+  });
+}
+
+setComments();
 
 // Comment container
 
@@ -119,7 +127,7 @@ commentContainer.classList.add("comments__users");
 
 comments.appendChild(commentContainer);
 
-userComments.forEach((userComment) => {
+function createCommentElement(name, date, text) {
   // Comment text div
 
   const commentTextbox = document.createElement("div");
@@ -148,19 +156,19 @@ userComments.forEach((userComment) => {
 
   const userName = document.createElement("h3");
   userName.classList.add("comments__users-textbox-content-nameanddate-name");
-  userName.textContent = userComment.name;
+  userName.textContent = name;
 
   //Create date
 
   const userDate = document.createElement("p");
   userDate.classList.add("comments__users-textbox-content-nameanddate-date");
-  userDate.textContent = userComment.date;
+  userDate.textContent = date;
 
   // Create text
 
   const userText = document.createElement("p");
   userText.classList.add("comments__users-textbox-content-text");
-  userText.textContent = userComment.text;
+  userText.textContent = text;
 
   nameAndDate.appendChild(userName);
   nameAndDate.appendChild(userDate);
@@ -169,8 +177,8 @@ userComments.forEach((userComment) => {
   userAvatardiv.appendChild(commentAvatar);
   commentTextbox.appendChild(eachComment);
 
-  commentContainer.appendChild(commentTextbox);
-});
+  return commentTextbox;
+}
 
 // Creating constant border for the navbar bio page
 
