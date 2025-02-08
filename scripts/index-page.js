@@ -69,6 +69,7 @@ messageDiv.appendChild(messageInput);
 buttonBox.appendChild(commentButton);
 
 // validation
+
 commentForm.addEventListener("submit", function (event) {
   event.preventDefault();
   nameInput.style.border = "";
@@ -169,4 +170,17 @@ userComments.forEach((userComment) => {
   commentTextbox.appendChild(eachComment);
 
   commentContainer.appendChild(commentTextbox);
+});
+
+// Creating constant border for the navbar bio page
+
+const navLinks = document.querySelectorAll(".navbar__link");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    navLinks.forEach((item) => {
+      item.classList.remove("active");
+      this.classList.add("active");
+    });
+  });
 });

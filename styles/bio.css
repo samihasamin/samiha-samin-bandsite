@@ -65,7 +65,7 @@ body {
   padding-bottom: 16px;
   font-size: 13px;
 }
-.navbar__link:active {
+.navbar__link.active {
   border-bottom: 3px solid white;
   font-weight: bold;
 }

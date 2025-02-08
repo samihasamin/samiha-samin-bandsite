@@ -153,3 +153,16 @@ showsContainer.appendChild(table);
 
 table.appendChild(tableHeader);
 table.appendChild(tableBody);
+
+// Creating constant border for the navbar bio page
+
+const navLinks = document.querySelectorAll(".navbar__link");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    navLinks.forEach((item) => {
+      item.classList.remove("active");
+      this.classList.add("active");
+    });
+  });
+});
