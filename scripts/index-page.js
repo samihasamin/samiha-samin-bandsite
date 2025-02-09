@@ -94,33 +94,47 @@ commentForm.addEventListener("submit", async function (event) {
   if (valid) {
     const userComment = { name: nameInput.value, comment: messageInput.value };
     const comment = new BandSiteApi(API_KEY);
-    comment.postComment(userComment);
     const response = await comment.postComment(userComment);
+    const formattedDate = new Date(response.timestamp).toLocaleDateString(
+      "en-US",
+      { year: "numeric", month: "2-digit", day: "2-digit" }
+    );
+
+    const commentEl = createCommentElement(
+      response.name,
+      formattedDate,
+      response.comment,
+      response.id,
+      response.likes || 0
+    );
+
+    commentContainer.prepend(commentEl);
+
     commentForm.reset();
   }
 });
 
 async function setComments() {
-  const comment = new BandSiteApi(API_KEY);
-  await comment.getComments().then((userComment) => {
-    userComment.sort((a, b) => b.timestamp - a.timestamp);
-    userComment.forEach((postcomment) => {
-      console.log(postcomment);
-      const currDate = new Date();
+  const commentApi = new BandSiteApi(API_KEY);
+  const userComments = await commentApi.getComments();
 
-      // Format the date as "MM/DD/YYYY"
-      const formattedDate = currDate.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-      });
-      const commentEl = createCommentElement(
-        postcomment.name,
-        formattedDate,
-        postcomment.comment
-      );
-      commentContainer.appendChild(commentEl);
-    });
+  userComments.sort((a, b) => b.timestamp - a.timestamp);
+
+  userComments.forEach((postComment) => {
+    const formattedDate = new Date(postComment.timestamp).toLocaleDateString(
+      "en-US",
+      { year: "numeric", month: "2-digit", day: "2-digit" }
+    );
+
+    const commentEl = createCommentElement(
+      postComment.name,
+      formattedDate,
+      postComment.comment,
+      postComment.id,
+      postComment.likes
+    );
+
+    commentContainer.appendChild(commentEl);
   });
 }
 
@@ -133,7 +147,7 @@ commentContainer.classList.add("comments__users");
 
 comments.appendChild(commentContainer);
 
-function createCommentElement(name, date, text) {
+function createCommentElement(name, date, text, id, likes = 0) {
   // Comment text div
 
   const commentTextbox = document.createElement("div");
@@ -158,15 +172,36 @@ function createCommentElement(name, date, text) {
   commentButtondiv.classList.add("comments__users-textbox-content-buttons");
   eachComment.appendChild(commentButtondiv);
 
+  //Like Button
+
   const likeButton = document.createElement("button");
   likeButton.classList.add("comments__users-textbox-content-buttons-like");
-  likeButton.textContent = "👍";
+  likeButton.textContent = `👍 ${likes}`;
   commentButtondiv.appendChild(likeButton);
+
+  // Like functionality
+
+  likeButton.addEventListener("click", async () => {
+    const likeApi = new BandSiteApi(API_KEY);
+    const response = await likeApi.likeComment(id);
+    likes++;
+    likeButton.textContent = `👍 ${likes}`;
+  });
+
+  //Delete Button
 
   const deleteButton = document.createElement("button");
   deleteButton.classList.add("comments__users-textbox-content-buttons-delete");
   deleteButton.textContent = "🗑️";
   commentButtondiv.appendChild(deleteButton);
+
+  // Delete functionality
+
+  deleteButton.addEventListener("click", async () => {
+    const deleteApi = new BandSiteApi(API_KEY);
+    const response = await deleteApi.deleteComment(id);
+    commentTextbox.remove();
+  });
 
   const nameAndDate = document.createElement("div");
   nameAndDate.classList.add("comments__users-textbox-content-nameanddate");
