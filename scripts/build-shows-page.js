@@ -1,3 +1,5 @@
+const API_KEY = "3696c394-752b-4ce8-92d2-857ffb646b8d";
+
 const shows = [
   {
     date: "Mon Sept 09 2024",
@@ -40,60 +42,78 @@ showsTitle.classList.add("shows-container__title");
 showsTitle.textContent = "Shows";
 showsContainer.appendChild(showsTitle);
 
-shows.forEach((show) => {
-  //Create div for each show block
+async function showsMobile() {
+  const showsData = new BandSiteApi(API_KEY);
+  const retrieveData = await showsData.getShows();
+  console.log(retrieveData);
+  retrieveData.forEach((show) => {
+    //Create div for each show block
 
-  const showsEl = document.createElement("div");
-  showsEl.classList.add("shows-container__list");
+    const showsEl = document.createElement("div");
+    showsEl.classList.add("shows-container__list");
 
-  //Create Date
+    //Create Date
 
-  const dateLabel = document.createElement("p");
-  dateLabel.classList.add("shows-container__list--label");
-  dateLabel.textContent = "DATE";
+    const dateLabel = document.createElement("p");
+    dateLabel.classList.add("shows-container__list--label");
+    dateLabel.textContent = "DATE";
 
-  const dateDetails = document.createElement("p");
-  dateDetails.classList.add("shows-container__list--date");
-  dateDetails.textContent = `${show.date}`;
+    const dateDetails = document.createElement("p");
+    dateDetails.classList.add("shows-container__list--date");
 
-  //Create Venue
+    const rawTimestamp = parseInt(show.date);
+    const dateObject = new Date(rawTimestamp);
+    const options = {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    };
+    const formattedDate = dateObject.toLocaleDateString("en-US", options);
 
-  const venueLabel = document.createElement("p");
-  venueLabel.classList.add("shows-container__list--label");
-  venueLabel.textContent = "VENUE";
+    dateDetails.textContent = formattedDate;
 
-  const venueDetails = document.createElement("p");
-  venueDetails.classList.add("shows-container__list--venue");
-  venueDetails.textContent = `${show.venue}`;
+    //Create Venue
 
-  //Create Location
+    const venueLabel = document.createElement("p");
+    venueLabel.classList.add("shows-container__list--label");
+    venueLabel.textContent = "VENUE";
 
-  const locationLabel = document.createElement("p");
-  locationLabel.classList.add("shows-container__list--label");
-  locationLabel.textContent = "LOCATION";
+    const venueDetails = document.createElement("p");
+    venueDetails.classList.add("shows-container__list--venue");
+    venueDetails.textContent = `${show.place}`;
 
-  const locationDetails = document.createElement("p");
-  locationDetails.classList.add("shows-container__list--location");
-  locationDetails.textContent = `${show.location}`;
+    //Create Location
 
-  //Create Button
+    const locationLabel = document.createElement("p");
+    locationLabel.classList.add("shows-container__list--label");
+    locationLabel.textContent = "LOCATION";
 
-  const buyticketButton = document.createElement("button");
-  buyticketButton.classList.add("shows-container__list--button");
-  buyticketButton.textContent = "BUY TICKETS";
+    const locationDetails = document.createElement("p");
+    locationDetails.classList.add("shows-container__list--location");
+    locationDetails.textContent = `${show.location}`;
 
-  //Append elements to showsContainer and showsEl
+    //Create Button
 
-  showsEl.appendChild(dateLabel);
-  showsEl.appendChild(dateDetails);
-  showsEl.appendChild(venueLabel);
-  showsEl.appendChild(venueDetails);
-  showsEl.appendChild(locationLabel);
-  showsEl.appendChild(locationDetails);
-  showsEl.appendChild(buyticketButton);
+    const buyticketButton = document.createElement("button");
+    buyticketButton.classList.add("shows-container__list--button");
+    buyticketButton.textContent = "BUY TICKETS";
 
-  showsContainer.appendChild(showsEl);
-});
+    //Append elements to showsContainer and showsEl
+
+    showsEl.appendChild(dateLabel);
+    showsEl.appendChild(dateDetails);
+    showsEl.appendChild(venueLabel);
+    showsEl.appendChild(venueDetails);
+    showsEl.appendChild(locationLabel);
+    showsEl.appendChild(locationDetails);
+    showsEl.appendChild(buyticketButton);
+
+    showsContainer.appendChild(showsEl);
+  });
+}
+
+showsMobile();
 
 // Tablet and Desktop table container
 
@@ -121,38 +141,56 @@ tableHeader.appendChild(tableHeaderRow);
 const tableBody = document.createElement("tbody");
 tableBody.classList.add("shows-table__body");
 
-shows.forEach((show) => {
-  const row = document.createElement("tr");
-  row.classList.add("shows-table__body--row");
-  const dateCell = document.createElement("td");
-  dateCell.classList.add("shows-table__body--date");
-  dateCell.textContent = show.date;
-  row.appendChild(dateCell);
+async function showsTabletandDesktop() {
+  const showsData = new BandSiteApi(API_KEY);
+  const retrieveData = await showsData.getShows();
+  console.log(retrieveData);
+  retrieveData.forEach((show) => {
+    const row = document.createElement("tr");
+    row.classList.add("shows-table__body--row");
+    const dateCell = document.createElement("td");
+    dateCell.classList.add("shows-table__body--date");
 
-  const venueCell = document.createElement("td");
-  venueCell.classList.add("shows-table__body--venue");
-  venueCell.textContent = show.venue;
-  row.appendChild(venueCell);
+    const rawTimestamp = parseInt(show.date);
+    const dateObject = new Date(rawTimestamp);
+    const options = {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    };
+    const formattedDate = dateObject.toLocaleDateString("en-US", options);
 
-  const locationCell = document.createElement("td");
-  locationCell.classList.add("shows-table__body--location");
-  locationCell.textContent = show.location;
-  row.appendChild(locationCell);
+    dateCell.textContent = formattedDate;
+    row.appendChild(dateCell);
 
-  const buttonCell = document.createElement("td");
-  const button = document.createElement("button");
-  button.textContent = "BUY TICKETS";
-  button.classList.add("shows-table__body--button");
-  buttonCell.appendChild(button);
-  row.appendChild(buttonCell);
+    const venueCell = document.createElement("td");
+    venueCell.classList.add("shows-table__body--venue");
+    venueCell.textContent = show.place;
+    row.appendChild(venueCell);
 
-  tableBody.appendChild(row);
-});
+    const locationCell = document.createElement("td");
+    locationCell.classList.add("shows-table__body--location");
+    locationCell.textContent = show.location;
+    row.appendChild(locationCell);
 
-showsContainer.appendChild(table);
+    const buttonCell = document.createElement("td");
+    const button = document.createElement("button");
+    button.textContent = "BUY TICKETS";
+    button.classList.add("shows-table__body--button");
+    buttonCell.appendChild(button);
+    row.appendChild(buttonCell);
 
-table.appendChild(tableHeader);
-table.appendChild(tableBody);
+    tableBody.appendChild(row);
+  });
+
+  showsContainer.appendChild(table);
+
+  table.appendChild(tableHeader);
+  table.appendChild(tableBody);
+}
+
+showsTabletandDesktop();
 
 // Creating constant border for the navbar bio page
 

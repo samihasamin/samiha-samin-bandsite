@@ -1,5 +1,3 @@
-import BandSiteApi from "./bandsite-api.js";
-
 const API_KEY = "3696c394-752b-4ce8-92d2-857ffb646b8d";
 
 const comments = document.querySelector(".comments");
@@ -96,7 +94,7 @@ commentForm.addEventListener("submit", async function (event) {
   if (valid) {
     const userComment = { name: nameInput.value, comment: messageInput.value };
     const comment = new BandSiteApi(API_KEY);
-    //comment.postComment(userComment);
+    comment.postComment(userComment);
     const response = await comment.postComment(userComment);
     commentForm.reset();
   }
@@ -108,9 +106,17 @@ async function setComments() {
     userComment.sort((a, b) => b.timestamp - a.timestamp);
     userComment.forEach((postcomment) => {
       console.log(postcomment);
+      const currDate = new Date();
+
+      // Format the date as "MM/DD/YYYY"
+      const formattedDate = currDate.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      });
       const commentEl = createCommentElement(
         postcomment.name,
-        new Date(),
+        formattedDate,
         postcomment.comment
       );
       commentContainer.appendChild(commentEl);

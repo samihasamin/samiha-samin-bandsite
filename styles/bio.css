@@ -716,6 +716,7 @@ body {
   }
 }
 .comments__users-textbox-content {
+  width: 100%;
   color: #323232;
   display: flex;
   flex-direction: column;

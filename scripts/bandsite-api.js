@@ -21,7 +21,6 @@ class BandSiteApi {
 
   async getComments() {
     try {
-      console.log("Here");
       const URL = `${this.baseUrl}comments?api_key=${this.apiKey}`;
       const response = await axios.get(URL);
       return response.data;
@@ -29,6 +28,14 @@ class BandSiteApi {
       console.error(error);
     }
   }
-}
 
-export default BandSiteApi;
+  async getShows() {
+    try {
+      const URL = `${this.baseUrl}showdates?api_key=${this.apiKey}`;
+      const response = await axios.get(URL);
+      return response.data;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+}
