@@ -429,6 +429,7 @@
       &-content {
         width: 100%;
         color: $primary-color-one;
+        position: relative;
         @include flex-align(column, 16px);
         &-nameanddate {
           display: flex;
@@ -450,6 +451,21 @@
 
           @include tablet {
             font-size: 14px;
+          }
+        }
+
+        &-buttons {
+          position: absolute;
+          bottom: -5px;
+          right: -5px;
+          display: flex;
+          gap: 5px;
+          &-like {
+            cursor: pointer;
+          }
+
+          &-delete {
+            cursor: pointer;
           }
         }
       }

@@ -718,6 +718,7 @@ body {
 .comments__users-textbox-content {
   width: 100%;
   color: #323232;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -741,4 +742,17 @@ body {
   .comments__users-textbox-content-text {
     font-size: 14px;
   }
+}
+.comments__users-textbox-content-buttons {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  display: flex;
+  gap: 5px;
+}
+.comments__users-textbox-content-buttons-like {
+  cursor: pointer;
+}
+.comments__users-textbox-content-buttons-delete {
+  cursor: pointer;
 }/*# sourceMappingURL=bio.css.map */

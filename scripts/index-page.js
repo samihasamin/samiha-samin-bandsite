@@ -154,6 +154,20 @@ function createCommentElement(name, date, text) {
   const eachComment = document.createElement("div");
   eachComment.classList.add("comments__users-textbox-content");
 
+  const commentButtondiv = document.createElement("div");
+  commentButtondiv.classList.add("comments__users-textbox-content-buttons");
+  eachComment.appendChild(commentButtondiv);
+
+  const likeButton = document.createElement("button");
+  likeButton.classList.add("comments__users-textbox-content-buttons-like");
+  likeButton.textContent = "👍";
+  commentButtondiv.appendChild(likeButton);
+
+  const deleteButton = document.createElement("button");
+  deleteButton.classList.add("comments__users-textbox-content-buttons-delete");
+  deleteButton.textContent = "🗑️";
+  commentButtondiv.appendChild(deleteButton);
+
   const nameAndDate = document.createElement("div");
   nameAndDate.classList.add("comments__users-textbox-content-nameanddate");
   eachComment.appendChild(nameAndDate);
