@@ -95,6 +95,7 @@ commentForm.addEventListener("submit", async function (event) {
     const userComment = { name: nameInput.value, comment: messageInput.value };
     const comment = new BandSiteApi(API_KEY);
     const response = await comment.postComment(userComment);
+    console.log(response);
     const formattedDate = new Date(response.timestamp).toLocaleDateString(
       "en-US",
       { year: "numeric", month: "2-digit", day: "2-digit" }
@@ -125,6 +126,8 @@ async function setComments() {
       "en-US",
       { year: "numeric", month: "2-digit", day: "2-digit" }
     );
+
+    console.log(userComments);
 
     const commentEl = createCommentElement(
       postComment.name,

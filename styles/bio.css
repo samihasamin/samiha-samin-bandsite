@@ -1,6 +1,6 @@
 @font-face {
   font-family: "NunitoSans";
-  src: url("../../assets/fonts/NunitoSans-Regular.woff");
+  src: url("../../assets/fonts/NunitoSans-Regular.woff") format("woff2");
   font-weight: 400;
 }
 @font-face {
@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: "NunitoSans";
+  font-family: "NunitoSans", sans-serif;
   font-weight: 400;
 }
 
@@ -147,7 +147,7 @@ body {
   }
 }
 .footer__social--title {
-  font-family: "NunitoSans";
+  font-family: "NunitoSans", sans-serif;
   font-size: 24px;
   font-weight: 700;
 }
@@ -211,7 +211,7 @@ body {
 .footer__info .footer__management h3,
 .footer__info .footer__artist-group h3,
 .footer__info .footer__entertainment h3 {
-  font-family: "NunitoSans";
+  font-family: "NunitoSans", sans-serif;
   font-size: 13px;
   font-weight: 700;
 }
@@ -225,7 +225,7 @@ body {
 .footer__info .footer__management p,
 .footer__info .footer__artist-group p,
 .footer__info .footer__entertainment p {
-  font-family: "NunitoSans";
+  font-family: "NunitoSans", sans-serif;
   font-size: 13px;
   font-weight: 400;
 }
@@ -243,7 +243,7 @@ body {
   color: white;
 }
 .footer__copyright {
-  font-family: "NunitoSans";
+  font-family: "NunitoSans", sans-serif;
   font-size: 11px;
   font-weight: 400;
 }
@@ -266,68 +266,68 @@ body {
   background-color: rgba(50, 50, 50, 0.5);
   background-blend-mode: overlay;
   width: 100%;
-  height: 200px;
+  height: 12.5rem;
   position: relative;
 }
 .herosection__title {
   color: white;
   position: absolute;
-  top: 90px;
-  padding-left: 16px;
+  top: 5.625rem;
+  padding-left: 1rem;
 }
 @media (min-width: 768px) {
   .herosection__title {
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 700;
     position: absolute;
-    top: 230px;
-    padding-left: 36px;
+    top: 14.375rem;
+    padding-left: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .herosection__title {
-    top: 280px;
-    padding-left: 130px;
+    top: 17.5rem;
+    padding-left: 8.125rem;
   }
 }
 @media (min-width: 768px) {
   .herosection {
-    height: 500px;
+    height: 31.25rem;
   }
 }
 @media (min-width: 1280px) {
   .herosection {
     background-position: center;
-    height: 630px;
+    height: 39.375rem;
   }
 }
 
 .aboutbandsite__title {
   display: flex;
   align-items: center;
-  padding: 24px 16px 8px 16px;
+  padding: 1.5rem 1rem 0.5rem 1rem;
   color: #323232;
-  font-family: "NunitoSans";
-  font-size: 24px;
+  font-family: "NunitoSans", sans-serif;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 @media (min-width: 768px) {
   .aboutbandsite__title {
-    font-size: 36px;
-    padding-left: 36px;
-    padding-top: 40px;
-    padding-bottom: 36px;
+    font-size: 2.25rem;
+    padding-left: 2.25rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .aboutbandsite__title {
-    padding-left: 115px;
-    padding-top: 48px;
+    padding-left: 7.1875rem;
+    padding-top: 3rem;
   }
 }
 .aboutbandsite__imagediv {
-  height: 200px;
-  margin-bottom: 16px;
+  height: 12.5rem;
+  margin-bottom: 1rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -336,163 +336,163 @@ body {
 }
 @media (min-width: 768px) {
   .aboutbandsite__imagediv {
-    height: 400px;
-    margin-bottom: 18px;
+    height: 25rem;
+    margin-bottom: 1.125rem;
   }
 }
 @media (min-width: 1280px) {
   .aboutbandsite__imagediv {
-    height: 550px;
-    margin-bottom: 36px;
+    height: 34.375rem;
+    margin-bottom: 2.25rem;
   }
 }
 .aboutbandsite__imagediv-image {
   width: 100%;
   height: auto;
-  padding: 16px;
+  padding: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (min-width: 768px) {
   .aboutbandsite__imagediv-image {
-    padding: 24px 90px 30px 90px;
+    padding: 1.5rem 5.625rem 1.875rem 5.625rem;
   }
 }
 @media (min-width: 1280px) {
   .aboutbandsite__imagediv-image {
-    padding: 28px 200px 30px 200px;
+    padding: 1.75rem 12.5rem 1.875rem 12.5rem;
   }
 }
 .aboutbandsite__quote {
   color: #323232;
-  font-family: "NunitoSans";
-  font-size: 14px;
+  font-family: "NunitoSans", sans-serif;
+  font-size: 0.875rem;
   font-weight: 700;
-  padding: 0px 16px 16px 16px;
+  padding: 0 1rem 1rem 1rem;
 }
 @media (min-width: 768px) {
   .aboutbandsite__quote {
-    font-size: 21px;
-    padding: 0px 90px 10px 90px;
+    font-size: 1.3125rem;
+    padding: 0 5.625rem 0.625rem 5.625rem;
     font-weight: bolder;
   }
 }
 @media (min-width: 1280px) {
   .aboutbandsite__quote {
-    padding: 0px 200px 10px 200px;
+    padding: 0 12.5rem 0.625rem 12.5rem;
     width: 88%;
   }
 }
 .aboutbandsite__quote--vocalist {
   color: #323232;
-  font-family: "NunitoSans";
-  font-size: 14px;
+  font-family: "NunitoSans", sans-serif;
+  font-size: 0.875rem;
   font-weight: 700;
-  padding: 0px 16px;
+  padding: 0 1rem;
 }
 @media (min-width: 768px) {
   .aboutbandsite__quote--vocalist {
-    font-size: 15px;
-    padding: 0px 90px;
+    font-size: 0.9375rem;
+    padding: 0 5.625rem;
     font-weight: 900;
   }
 }
 @media (min-width: 1280px) {
   .aboutbandsite__quote--vocalist {
-    font-size: 16px;
-    padding: 0px 200px;
+    font-size: 1rem;
+    padding: 0 12.5rem;
   }
 }
 .aboutbandsite__article {
-  font-family: "NunitoSans";
-  font-size: 14px;
+  font-family: "NunitoSans", sans-serif;
+  font-size: 0.875rem;
   font-weight: 700;
   color: #323232;
-  padding: 16px;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .aboutbandsite__article {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 500;
-    padding: 36px 90px 25px 90px;
+    padding: 2.25rem 5.625rem 1.5625rem 5.625rem;
   }
 }
 @media (min-width: 1280px) {
   .aboutbandsite__article {
-    padding: 36px 200px 25px 200px;
+    padding: 2.25rem 12.5rem 1.5625rem 12.5rem;
   }
 }
 @media (min-width: 768px) {
   .aboutbandsite__article--whole {
     display: flex;
-    padding: 0px 90px 36px 90px;
-    gap: 10px;
+    padding: 0 5.625rem 2.25rem 5.625rem;
+    gap: 0.625rem;
     line-height: 1.5rem;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 @media (min-width: 1280px) {
   .aboutbandsite__article--whole {
-    padding: 0px 200px 36px 200px;
+    padding: 0 12.5rem 2.25rem 12.5rem;
   }
 }
 .aboutbandsite__article--whole .aboutbandsite__article--first {
-  padding: 0px 16px 24px 16px;
-  font-family: "NunitoSans";
-  font-size: 13px;
+  padding: 0 1rem 1.5rem 1rem;
+  font-family: "NunitoSans", sans-serif;
+  font-size: 0.8125rem;
   font-weight: 400;
   color: #323232;
 }
 @media (min-width: 768px) {
   .aboutbandsite__article--whole .aboutbandsite__article--first {
-    font-size: 14px;
-    padding: 0px;
+    font-size: 0.875rem;
+    padding: 0;
   }
 }
 .aboutbandsite__article--whole .aboutbandsite__article--second {
-  padding: 0px 16px 16px 16px;
-  font-family: "NunitoSans";
-  font-size: 13px;
+  padding: 0 1rem 1rem 1rem;
+  font-family: "NunitoSans", sans-serif;
+  font-size: 0.8125rem;
   font-weight: 400;
   color: #323232;
 }
 @media (min-width: 768px) {
   .aboutbandsite__article--whole .aboutbandsite__article--second {
-    font-size: 14px;
-    padding: 0px;
+    font-size: 0.875rem;
+    padding: 0;
   }
 }
 
 .photogallery {
   background-color: #fafafa;
-  padding: 16px 16px 5px 16px;
+  padding: 1rem 1rem 0.3125rem 1rem;
 }
 @media (min-width: 768px) {
   .photogallery {
-    padding: 45px 36px 36px 36px;
+    padding: 2.8125rem 2.25rem 2.25rem 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .photogallery {
-    padding: 45px 130px 36px 130px;
+    padding: 2.8125rem 8.125rem 2.25rem 8.125rem;
   }
 }
 .photogallery__title {
   color: #323232;
-  padding-bottom: 11px;
-  font-size: 24px;
-  font-family: "NunitoSans";
+  padding-bottom: 0.6875rem;
+  font-size: 1.5rem;
+  font-family: "NunitoSans", sans-serif;
   font-weight: 700;
 }
 @media (min-width: 768px) {
   .photogallery__title {
-    font-size: 36px;
-    padding-left: 10px;
+    font-size: 2.25rem;
+    padding-left: 0.625rem;
   }
 }
 @media (min-width: 1280px) {
   .photogallery__title {
-    padding-bottom: 25px;
+    padding-bottom: 1.5625rem;
   }
 }
 @media (min-width: 768px) {
@@ -503,7 +503,7 @@ body {
 }
 .photogallery__collection--image {
   width: 100%;
-  padding: 5px 0px;
+  padding: 0.3125rem 0;
   filter: grayscale(100%);
 }
 .photogallery__collection--image:hover {
@@ -512,7 +512,7 @@ body {
 @media (min-width: 768px) {
   .photogallery__collection--image {
     width: 32%;
-    padding: 10px;
+    padding: 0.625rem;
     flex-grow: 1;
   }
 }
@@ -522,94 +522,94 @@ body {
   margin: 0 auto;
 }
 .comments__header {
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
-  padding: 16px 16px 0px 16px;
+  padding: 1rem 1rem 0 1rem;
   color: #323232;
 }
 @media (min-width: 768px) {
   .comments__header {
-    font-size: 36px;
-    padding: 48px 0px 0px 36px;
+    font-size: 2.25rem;
+    padding: 3rem 0 0 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .comments__header {
-    padding-left: 100px;
+    padding-left: 6.25rem;
   }
 }
 .comments__form {
   display: flex;
   flex-direction: row;
-  gap: 16px;
-  padding: 16px 16px 16px 64px;
+  gap: 1rem;
+  padding: 1rem 1rem 1rem 4rem;
   position: relative;
   height: 40%;
 }
 @media (min-width: 768px) {
   .comments__form {
-    padding: 40px 80px 30px 80px;
+    padding: 2.5rem 5rem 1.875rem 5rem;
     display: flex;
   }
 }
 @media (min-width: 768px) and (min-width: 1280px) {
   .comments__form {
-    padding: 18px 400px 20px 400px;
+    padding: 1.125rem 25rem 1.25rem 25rem;
   }
 }
 @media (min-width: 768px) {
   .comments__form-group-one {
-    padding-top: 20px;
+    padding-top: 1.25rem;
   }
 }
 .comments__form-group-one-avatar {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   position: absolute;
-  top: 40px;
-  left: 20px;
+  top: 2.5rem;
+  left: 1.25rem;
 }
 @media (min-width: 768px) {
   .comments__form-group-one-avatar {
     position: static;
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
   }
 }
 .comments__form-group-two {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
   width: 100%;
 }
 .comments__form-group-two-namesection-label {
-  padding-bottom: 4px;
-  font-size: 10px;
+  padding-bottom: 0.25rem;
+  font-size: 0.625rem;
   font-weight: bolder;
   color: #afafaf;
 }
 @media (min-width: 768px) {
   .comments__form-group-two-namesection-label {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 .comments__form-group-two-namesection-nameinput {
-  height: 48px;
+  height: 3rem;
   width: 100%;
   border: 1px solid #e1e1e1;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #fafafa;
-  padding: 12px;
+  padding: 0.75rem;
 }
 .comments__form-group-two-namesection-nameinput::-moz-placeholder {
-  font-family: "NunitoSans";
+  font-family: "NunitoSans", sans-serif;
   font-weight: 13px;
   color: #323232;
   font-weight: 500;
 }
 .comments__form-group-two-namesection-nameinput::placeholder {
-  font-family: "NunitoSans";
+  font-family: "NunitoSans", sans-serif;
   font-weight: 13px;
   color: #323232;
   font-weight: 500;
@@ -618,21 +618,21 @@ body {
   border: 1px solid #323232;
 }
 .comments__form-group-two-messagesection-message {
-  height: 120px;
+  height: 7.5rem;
   width: 100%;
   border: 1px solid #e1e1e1;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #fafafa;
-  padding: 12px;
+  padding: 0.75rem;
 }
 .comments__form-group-two-messagesection-message::-moz-placeholder {
-  font-family: "NunitoSans";
+  font-family: "NunitoSans", sans-serif;
   font-weight: 13px;
   color: #323232;
   font-weight: 500;
 }
 .comments__form-group-two-messagesection-message::placeholder {
-  font-family: "NunitoSans";
+  font-family: "NunitoSans", sans-serif;
   font-weight: 13px;
   color: #323232;
   font-weight: 500;
@@ -641,14 +641,14 @@ body {
   border: 1px solid #323232;
 }
 .comments__form-group-two-messagesection-label {
-  padding-bottom: 4px;
-  font-size: 10px;
+  padding-bottom: 0.25rem;
+  font-size: 0.625rem;
   font-weight: bolder;
   color: #afafaf;
 }
 @media (min-width: 768px) {
   .comments__form-group-two-messagesection-label {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 @media (min-width: 768px) {
@@ -665,7 +665,7 @@ body {
   color: white;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 0.9375rem;
   width: 100%;
 }
 .comments__form-group-two-buttonbox-button:hover {
@@ -673,46 +673,46 @@ body {
 }
 @media (min-width: 768px) {
   .comments__form-group-two-buttonbox-button {
-    height: 40px;
-    width: 150px;
+    height: 2.5rem;
+    width: 9.375rem;
   }
 }
 .comments__users {
   height: 60%;
   width: 100%;
-  padding: 16px;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .comments__users {
-    padding: 0px 80px 40px 80px;
+    padding: 0 5rem 2.5rem 5rem;
   }
 }
 @media (min-width: 1280px) {
   .comments__users {
-    padding: 0px 400px 40px 400px;
+    padding: 0 25rem 2.5rem 25rem;
   }
 }
 .comments__users-textbox {
   border-top: 1px solid #e1e1e1;
   border-collapse: collapse;
-  padding: 16px 0px;
+  padding: 1rem 0;
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 1rem;
 }
 .comments__users-textbox:last-child {
   border-bottom: 1px solid #e1e1e1;
 }
 .comments__users-textbox-avatar-img {
   background: #e1e1e1;
-  width: 36px;
-  height: 36px;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 50%;
 }
 @media (min-width: 768px) {
   .comments__users-textbox-avatar {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
   }
 }
 .comments__users-textbox-content {
@@ -721,34 +721,34 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 .comments__users-textbox-content-nameanddate {
   display: flex;
   justify-content: space-between;
 }
 .comments__users-textbox-content-nameanddate-name {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .comments__users-textbox-content-nameanddate-date {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #afafaf;
 }
 .comments__users-textbox-content-text {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 500;
 }
 @media (min-width: 768px) {
   .comments__users-textbox-content-text {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 .comments__users-textbox-content-buttons {
   position: absolute;
-  bottom: -5px;
-  right: -5px;
+  bottom: -0.3125rem;
+  right: -0.3125rem;
   display: flex;
-  gap: 5px;
+  gap: 0.3125rem;
 }
 .comments__users-textbox-content-buttons-like {
   cursor: pointer;

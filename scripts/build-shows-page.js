@@ -48,7 +48,7 @@ async function showsMobile() {
 
     const venueDetails = document.createElement("p");
     venueDetails.classList.add("shows-container__list--venue");
-    venueDetails.textContent = `${show.place}`;
+    venueDetails.textContent = show.place;
 
     //Create Location
 
@@ -58,7 +58,7 @@ async function showsMobile() {
 
     const locationDetails = document.createElement("p");
     locationDetails.classList.add("shows-container__list--location");
-    locationDetails.textContent = `${show.location}`;
+    locationDetails.textContent = show.location;
 
     //Create Button
 
