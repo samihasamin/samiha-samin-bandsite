@@ -26,14 +26,14 @@ body {
 .navbar {
   background-color: #323232;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .navbar {
     display: flex;
     padding: 0px 36px;
     gap: 36px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .navbar {
     padding-left: 130px;
   }
@@ -50,7 +50,7 @@ body {
   display: flex;
   padding: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .navbar__list {
     display: flex;
     align-items: center;
@@ -73,7 +73,7 @@ body {
   border-bottom: 3px solid white;
   color: #fafafa;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .navbar__link {
     padding: 32px 0;
     font-size: 14px;
@@ -92,13 +92,13 @@ body {
   flex-direction: column;
   gap: 16px;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .footer {
     padding: 40px 36px;
     gap: 36px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .footer {
     padding: 40px 150px;
   }
@@ -106,7 +106,7 @@ body {
 .footer__logo--desktop {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .footer__logo--desktop {
     display: flex;
     align-items: center;
@@ -115,12 +115,12 @@ body {
 .footer__logo--mobile {
   padding-top: 40px;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .footer__logo--mobile {
     display: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .footer__brand {
     display: flex;
     justify-content: space-between;
@@ -131,14 +131,14 @@ body {
   flex-direction: column;
   gap: 16px;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .footer__social {
     display: flex;
     flex-direction: row;
     gap: 36px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .footer__social {
     display: flex;
     flex-direction: row;
@@ -151,7 +151,7 @@ body {
   font-size: 24px;
   font-weight: 700;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .footer__social--title {
     font-size: 36px;
   }
@@ -161,14 +161,14 @@ body {
   flex-direction: row;
   gap: 30px;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .footer__social--icon {
     align-items: center;
     position: relative;
     top: 4px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .footer__social--icon {
     top: 5px;
   }
@@ -178,7 +178,7 @@ body {
   flex-direction: column;
   gap: 24px;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .footer__info {
     display: flex;
     flex-direction: row;
@@ -186,7 +186,7 @@ body {
     justify-content: space-between;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .footer__info {
     display: flex;
     flex-direction: row;
@@ -201,7 +201,7 @@ body {
   flex-direction: column;
   gap: 16px;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .footer__info .footer__management,
   .footer__info .footer__artist-group,
   .footer__info .footer__entertainment {
@@ -215,7 +215,7 @@ body {
   font-size: 13px;
   font-weight: 700;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .footer__info .footer__management h3,
   .footer__info .footer__artist-group h3,
   .footer__info .footer__entertainment h3 {
@@ -229,7 +229,7 @@ body {
   font-size: 13px;
   font-weight: 400;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .footer__info .footer__management p,
   .footer__info .footer__artist-group p,
   .footer__info .footer__entertainment p {
@@ -247,13 +247,13 @@ body {
   font-size: 11px;
   font-weight: 400;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .footer__copyright {
     padding: 16px 0px;
     font-size: 14px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .footer__copyright {
     padding: 18px 0px;
   }
@@ -275,7 +275,7 @@ body {
   top: 5.625rem;
   padding-left: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .herosection__title {
     font-size: 3.75rem;
     font-weight: 700;
@@ -284,18 +284,18 @@ body {
     padding-left: 2.25rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .herosection__title {
     top: 17.5rem;
     padding-left: 8.125rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .herosection {
     height: 31.25rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .herosection {
     background-position: center;
     height: 39.375rem;
@@ -311,7 +311,7 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .aboutbandsite__title {
     font-size: 2.25rem;
     padding-left: 2.25rem;
@@ -319,7 +319,7 @@ body {
     padding-bottom: 2.25rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .aboutbandsite__title {
     padding-left: 7.1875rem;
     padding-top: 3rem;
@@ -334,13 +334,13 @@ body {
   align-items: center;
   flex-direction: row;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .aboutbandsite__imagediv {
     height: 25rem;
     margin-bottom: 1.125rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .aboutbandsite__imagediv {
     height: 34.375rem;
     margin-bottom: 2.25rem;
@@ -353,12 +353,12 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .aboutbandsite__imagediv-image {
     padding: 1.5rem 5.625rem 1.875rem 5.625rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .aboutbandsite__imagediv-image {
     padding: 1.75rem 12.5rem 1.875rem 12.5rem;
   }
@@ -370,14 +370,14 @@ body {
   font-weight: 700;
   padding: 0 1rem 1rem 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .aboutbandsite__quote {
     font-size: 1.3125rem;
     padding: 0 5.625rem 0.625rem 5.625rem;
     font-weight: bolder;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .aboutbandsite__quote {
     padding: 0 12.5rem 0.625rem 12.5rem;
     width: 88%;
@@ -390,14 +390,14 @@ body {
   font-weight: 700;
   padding: 0 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .aboutbandsite__quote--vocalist {
     font-size: 0.9375rem;
     padding: 0 5.625rem;
     font-weight: 900;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .aboutbandsite__quote--vocalist {
     font-size: 1rem;
     padding: 0 12.5rem;
@@ -410,19 +410,19 @@ body {
   color: #323232;
   padding: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .aboutbandsite__article {
     font-size: 1.5rem;
     font-weight: 500;
     padding: 2.25rem 5.625rem 1.5625rem 5.625rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .aboutbandsite__article {
     padding: 2.25rem 12.5rem 1.5625rem 12.5rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .aboutbandsite__article--whole {
     display: flex;
     padding: 0 5.625rem 2.25rem 5.625rem;
@@ -431,7 +431,7 @@ body {
     font-size: 0.875rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .aboutbandsite__article--whole {
     padding: 0 12.5rem 2.25rem 12.5rem;
   }
@@ -443,7 +443,7 @@ body {
   font-weight: 400;
   color: #323232;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .aboutbandsite__article--whole .aboutbandsite__article--first {
     font-size: 0.875rem;
     padding: 0;
@@ -456,7 +456,7 @@ body {
   font-weight: 400;
   color: #323232;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .aboutbandsite__article--whole .aboutbandsite__article--second {
     font-size: 0.875rem;
     padding: 0;
@@ -467,12 +467,12 @@ body {
   background-color: #fafafa;
   padding: 1rem 1rem 0.3125rem 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .photogallery {
     padding: 2.8125rem 2.25rem 2.25rem 2.25rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .photogallery {
     padding: 2.8125rem 8.125rem 2.25rem 8.125rem;
   }
@@ -484,18 +484,18 @@ body {
   font-family: "NunitoSans", sans-serif;
   font-weight: 700;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .photogallery__title {
     font-size: 2.25rem;
     padding-left: 0.625rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .photogallery__title {
     padding-bottom: 1.5625rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .photogallery__collection {
     display: flex;
     flex-wrap: wrap;
@@ -509,7 +509,7 @@ body {
 .photogallery__collection--image:hover {
   filter: grayscale(0%);
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .photogallery__collection--image {
     width: 32%;
     padding: 0.625rem;
@@ -527,13 +527,13 @@ body {
   padding: 1rem 1rem 0 1rem;
   color: #323232;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .comments__header {
     font-size: 2.25rem;
     padding: 3rem 0 0 2.25rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .comments__header {
     padding-left: 6.25rem;
   }
@@ -546,18 +546,18 @@ body {
   position: relative;
   height: 40%;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .comments__form {
     padding: 2.5rem 5rem 1.875rem 5rem;
     display: flex;
   }
 }
-@media (min-width: 768px) and (min-width: 1280px) {
+@media (min-width: 48rem) and (min-width: 80rem) {
   .comments__form {
     padding: 1.125rem 25rem 1.25rem 25rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .comments__form-group-one {
     padding-top: 1.25rem;
   }
@@ -570,7 +570,7 @@ body {
   top: 2.5rem;
   left: 1.25rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .comments__form-group-one-avatar {
     position: static;
     width: 3rem;
@@ -589,7 +589,7 @@ body {
   font-weight: bolder;
   color: #afafaf;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .comments__form-group-two-namesection-label {
     font-size: 0.75rem;
   }
@@ -646,12 +646,12 @@ body {
   font-weight: bolder;
   color: #afafaf;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .comments__form-group-two-messagesection-label {
     font-size: 0.75rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .comments__form-group-two-buttonbox {
     display: flex;
     justify-content: flex-end;
@@ -671,7 +671,7 @@ body {
 .comments__form-group-two-buttonbox-button:hover {
   background-color: #000000;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .comments__form-group-two-buttonbox-button {
     height: 2.5rem;
     width: 9.375rem;
@@ -682,12 +682,12 @@ body {
   width: 100%;
   padding: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .comments__users {
     padding: 0 5rem 2.5rem 5rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .comments__users {
     padding: 0 25rem 2.5rem 25rem;
   }
@@ -709,7 +709,7 @@ body {
   height: 2.25rem;
   border-radius: 50%;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .comments__users-textbox-avatar {
     width: 3rem;
     height: 3rem;
@@ -738,7 +738,7 @@ body {
   font-size: 0.8125rem;
   font-weight: 500;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .comments__users-textbox-content-text {
     font-size: 0.875rem;
   }
